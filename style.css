@@ -1,0 +1,238 @@
+/* body parameters for all media screens */
+  
+html, body{
+   
+
+     height: 100%;
+}
+
+body{
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+/* .stories{
+    display: flex;
+    flex-wrap: wrap;
+ width: 100%;
+margin: 0px;
+} */
+.topstories{
+    color: #ffffff;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.newsbackground{
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-image: cover;
+    height:100%;
+    /* width:100%; */
+    /* display:flex; */
+    flex-grow:1;
+    /* align-content: center; */
+
+}
+
+/* Mobile */
+
+section{
+    width: 100%;
+    height: 35rem;
+    flex: 1 0 auto;
+}
+
+
+.logo{
+    
+    background-image: url(images/nyt-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}  
+
+
+/* Tablet */
+
+ 
+@media screen and (min-width:600px){
+    section{
+        width: 100%;
+        height: 45rem;
+
+    }
+
+    .logo{
+        background-position: left;
+        background-size: 20rem;
+        margin-left: 2.5rem;
+    }
+   
+} 
+
+/* Desktop */
+ 
+@media screen and (min-width:1000px){
+
+    section{
+
+        height: 45rem;
+    }
+    .logo{
+        background-position: center left;
+        background-size: 20rem;
+        margin-top: 10%;
+    }
+
+    
+
+} 
+
+
+/* footer for mobile and tablet ( < 1000px) */
+ 
+footer{
+    
+    color:#c2c2c2;
+    width:100%;    
+    flex-shrink: 0;
+    height: 2rem;
+}
+
+
+.copyright{
+
+    text-align: center;
+    margin-top: 15%;
+} 
+
+/* footer Destop  */
+
+  @media screen and (min-width:1000px){
+
+  .copyright{
+    
+    text-align: left;
+    margin-left: 2.5rem;
+
+  }
+    
+    
+}  
+
+
+/*  
+ $tablet: “(min-width:600px) and (max-width:1000px)”;
+$desktop:”(min-width:1000px)”;
+
+html, body{
+   
+
+     height: 100%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+/* Mobile */
+/* 
+section{
+    width: 100%;
+    height: 35rem;
+    flex: 1 0 auto;
+}
+
+
+.logo{
+    
+    background-image: url(images/nyt-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}   */
+
+
+/* Tablet */
+
+/* 
+@media #{$tablet} {
+    section{
+        width: 100%;
+        height: 45rem;
+
+    }
+
+    .logo{
+        background-position: left;
+        background-size: 20rem;
+        margin-left: 2.5rem;
+    }
+   
+}
+
+/* Desktop */
+
+/* @media #{$desktop} {
+
+    section{
+
+        height: 45rem;
+    }
+
+    .logo{
+        background-position: center;
+        background-size: 20rem;
+        margin-top: 10%;
+
+    }
+
+    
+
+} */
+
+
+/* footer for mobile and tablet ( < 1000px) */
+/* 
+footer{
+    
+    color:#c2c2c2;
+    width:100%;    
+    flex-shrink: 0;
+    height: 2rem;
+}
+
+
+.copyright{
+
+    text-align: center;
+    margin-top: 15%;
+}
+
+/* footer Destop */
+/* 
+@media #{$desktop}{
+
+  .copyright{
+    
+    text-align: left;
+    margin-left: 2.5rem;
+
+  }
+    
+    
+}  */ 
