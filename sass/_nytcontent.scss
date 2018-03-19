@@ -4,14 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
- //    margin-top: 40%;
- //    height:70rem;
+
     
  } 
  
  p{
     
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.6);
     height: auto;
     
  }
@@ -26,7 +25,6 @@
     text-align: end;
     flex-direction: column;
     display: flex;
- //    flex-wrap: wrap;
     width: 100%;
     margin: 0px;
  } 
@@ -38,7 +36,7 @@
     width: 100%;
  
  }  
- /* news style for mobile <600px */
+ 
  .newsbackground{
     
     width:100%;
@@ -52,6 +50,9 @@
  
  }  
  
+
+//  Tablet
+
  @media screen and (min-width:600px){
  
      
@@ -84,7 +85,11 @@
  }
  
  
+//  Destop
+
+
  @media screen and (min-width:1000px){
+     
   .topstories{
         display: flex;
         flex-direction: row;

@@ -264,7 +264,7 @@ select {
   width: 100%; }
 
 p {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   height: auto; }
 
 .stories {
@@ -297,7 +297,6 @@ p {
       align-self: flex-end;
   width: 100%; }
 
-/* news style for mobile <600px */
 .newsbackground {
   width: 100%;
   background-repeat: no-repeat;

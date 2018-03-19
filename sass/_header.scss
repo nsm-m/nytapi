@@ -1,7 +1,6 @@
 
 header{
     width: 100%;
- //    margin-top: 10%;
     height: auto;
     flex: 1 0 auto;  
     flex-wrap: wrap;
@@ -48,7 +47,7 @@ header{
  
  }  
 
-//  last min added media query for banner  
+//  specific media query for banner  
  @media screen and (max-width: 600px) {
 
     header{
@@ -77,6 +76,10 @@ header{
     }  
 //  end of mobile query for banner
 
+
+// Media Queries for Tablet 
+
+
  @media screen and (min-width:600px){
  
  header{
@@ -95,7 +98,6 @@ header{
      flex-flow: row;
      flex-wrap: wrap;
      justify-content: center;
-     // margin-top: 20%;
      margin-top: 15%;
      width: 50rem;
      flex-wrap: wrap;
@@ -121,13 +123,15 @@ header{
         display: flex;
         flex-direction: column ;
         margin-top: 15rem;
-     //    margin-top:40%;
+   
     }
  
  
  }
  
- 
+//  Media Queries for desktop 
+
+
  @media screen and (min-width:1000px){
  
  
@@ -142,8 +146,8 @@ header{
  
  
     .banner{
-     //    margin-top:10%;
-       height: 100%;
+     
+        height: 100%;
         flex-direction:row;
         height: 100%;
         align-items: center;
@@ -151,8 +155,7 @@ header{
  
  
     .logo{
-     //    background-position: center left;
-     //    background-size: 20rem;
+     
         margin-top: 0%;
    
      }
