@@ -295,7 +295,10 @@ p {
   font-size: 1rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 100%; }
+  width: 100%;
+  text-align: left;
+  font-family: Opensans-light;
+  font-size: 1rem; }
 
 .newsbackground {
   width: 100%;

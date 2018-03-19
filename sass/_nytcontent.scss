@@ -34,6 +34,10 @@
     font-size: 1rem;
     align-self: flex-end;
     width: 100%;
+    text-align: left;
+    font-family:Opensans-light;
+    // font-weight: light;
+    font-size:1rem;
  
  }  
  
@@ -89,7 +93,7 @@
 
 
  @media screen and (min-width:1000px){
-     
+
   .topstories{
         display: flex;
         flex-direction: row;
