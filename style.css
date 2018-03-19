@@ -362,12 +362,3 @@ section{
     margin-top: 15%;
 } */
 
-/* footer Destop */
-/* 
-@media #{$desktop}{
-
-  .copyright{
-    
-    text-align: left;
-    margin-left: 2.5rem;}
-  }

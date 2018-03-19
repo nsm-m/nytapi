@@ -1,0 +1,52 @@
+
+
+.footer{
+    
+    text-align: center;
+    width: 100%;    
+    flex-shrink: 0;
+    height: 2rem;
+
+}
+
+
+.copyright{
+
+   text-align: center;
+   margin-top: 15%;
+   color:#c2c2c2;
+  
+}
+
+
+
+@media screen and (min-width:600px){
+ 
+   .footer{
+    color:#c2c2c2;
+    text-align: center
+   }
+
+   .copyright{
+
+    text-align: center;
+    margin-top: 15%;
+    }   
+  
+}   
+
+
+
+@media screen and (min-width:1000px){
+
+
+ .copyright{
+   
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+ }
+   
+   
+}
