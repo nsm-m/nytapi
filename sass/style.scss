@@ -1,5 +1,15 @@
-// $tablet: 600px 1000px;
-// $desktop:1000px;
+
+@import 'reset';
+@import 'body';
+@import 'header';
+@import 'nytcontent';
+@import 'footer';
+
+
+
+
+
+
 
 // // Mobile and default
 
@@ -488,9 +498,3 @@
 // }   
 
 // working sass end
-
-@import 'reset';
-@import 'body';
-@import 'header';
-@import 'nytcontent';
-@import 'footer';

@@ -21,7 +21,7 @@ url += '?' + $.param({
 
       for (var i=0; i<12; ++i ){
         if (data.results[i].multimedia[4]) {
-          $(".stories").append("<a href='"+data.results[i].url+"' class='newslink'><div class='newsbackground' style='background-image: url("+data.results[i].multimedia[3].url+")'> <p class = 'newstitle'>"+data.results[i].abstract+"</p></div></a>"); 
+          $(".stories").append("<a href='"+data.results[i].url+"' class='newslink'><div class='newsbackground' style='background-image: url("+data.results[i].multimedia[4].url+")'> <p class = 'newstitle'>"+data.results[i].abstract+"</p></div></a>"); 
           
          
         } else {

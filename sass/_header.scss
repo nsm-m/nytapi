@@ -47,8 +47,36 @@ header{
     width: 65%;
  
  }  
- 
- 
+
+//  last min added media query for banner  
+ @media screen and (max-width: 600px) {
+
+    header{
+        width: 100%;
+        margin-top: 5rem;
+        height: auto;
+        flex: 1 0 auto;  
+        flex-wrap: wrap;
+        flex-direction: column; 
+        display: flex;
+        align-content: center;
+        align-items: center;
+     } 
+
+
+ .choice{
+    color:white;
+    text-align: center;
+    margin-top: 5rem;
+    display:flex;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+    }  
+//  end of mobile query for banner
+
  @media screen and (min-width:600px){
  
  header{
