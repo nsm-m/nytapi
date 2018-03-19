@@ -8,21 +8,27 @@
 
 
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css"> 
+    <!-- also the rest chould be with sass folder -->
+    <link rel="stylesheet" href="build/css/style.min.css"> 
+    <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 
 <body>
 
-    <section>
+    <header>
+ 
+<div class = "banner">
 
+  <div class="logo"> 
+      <img src="images/nyt-logo.svg" alt="New York Time logo" height="100% "width="100%">
+    </div>   
 
-
-  <div class="logo"></div>  
-
-  <div class= "topstories"> 
-        <div class= "stories"> 
- <select>
+  <div class="choice">
+      
+     Choose a section:
+  
+      <select>
         <option value="home">Home</option>
         <option value="opinion">Opinion</option>
         <option value="world">World</option>
@@ -42,22 +48,25 @@
         <option value="theater">Theater</option>
         <option value="sundayreview">Sunday Review</option>
       </select> 
-
-      
-      
-     
-   </div>    
-     
-
-
+    
+    </div>
 
 </div>
 
+</header>
 
-</section>
+      <div class= "topstories"> 
+            <div class= "stories">  </div>    
+     
+      </div>
+
+
+
+
+
 <footer>
 
-  <div class= "copyright"> &copy; Copyright INSTANEWS 2016 </div>
+  <div class= "copyright"> &copy; Copyright 2016 INSTANEWS  </div>
    
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

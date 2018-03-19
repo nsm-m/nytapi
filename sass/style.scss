@@ -1,0 +1,487 @@
+// $tablet: 600px 1000px;
+// $desktop:1000px;
+
+// // Mobile and default
+
+// html, body{
+   
+//      height: 100%;
+// }
+
+
+// body{
+    // background-color: black;
+    // display: flex;
+    // flex-direction: column;
+    // width: 100%;
+
+// }
+
+
+// section{
+//     width: 100%;
+//     margin-top: 10%;
+//     height: auto;
+//     flex: 1 0 auto;  
+//     flex-wrap: wrap;
+//     flex-direction: column; 
+//     display: flex;
+//     align-content: center;
+//     align-items: center;
+
+//     // @media #{$tablet} {
+
+    
+//     //         width: 100%;
+//     //         height: 45rem;
+        
+
+//     // }
+
+
+
+// }
+
+// .logo{
+    
+//     // background-image: url('images/nyt-logo.svg');
+//     // background-size:cover;
+//     // background-repeat: no-repeat;
+//     // background-position: center center;
+//     margin-top:2rem;
+//     width: 100%;
+//     height: 100%;
+
+//     // @media ($tablet) {
+//     //     .logo{
+//     //   background-position: left;
+//     //   background-size: 2rem;
+//     //   margin-left: 2.5rem;
+//     //     }
+//     // }
+
+// }    
+
+
+
+// .choice{
+//     color:white;
+//     text-align: center;
+//     margin-top: 1.5rem;
+// }
+
+
+// select{
+//     margin-top: 1rem;
+// }
+
+
+// .topstories{
+   
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     margin-top:1.5rem;
+    
+// }
+
+
+// .stories{
+   
+//     align-content: stretch;
+//     justify-content: flex-start;
+//     text-align: end;
+// }
+
+
+// .stories a {
+//     color: #ffffff;
+//     font-size: 1rem;
+//     align-self: flex-end;
+
+// }
+
+// .newsbackground{
+    
+//     width:100%;
+//     background-repeat:no-repeat;
+//     background-size:cover;
+//     background-position:center;
+//     height:300px;
+
+// }
+
+// footer{
+    
+//     color:#c2c2c2;
+//     width:100%;    
+//     flex-shrink: 0;
+//     // height: 2rem;
+//     height: auto;
+
+//     @include tablet {
+//         color:red;
+//     }
+// }
+
+
+// .copyright{
+
+//     text-align: center;
+//     margin-top: 30%;
+// }
+
+
+// /* Tablet */
+
+
+
+// /* Desktop */
+
+// @media #{$desktop} {
+
+//     section{
+
+//         height: 45rem;
+//     }
+
+//     .logo{
+//         background-position: center left;
+//         background-size: 20rem;
+//         margin-top: 10%;
+
+//     }
+
+    
+
+// } 
+
+
+// create partials, only the partials should be here 
+// (put partials (don't forget the underscore in front and add themm to the sass folder )
+// and import all the partials here
+
+
+// /* footer Destop */
+
+// @media #{$desktop}{
+
+//   .copyright{
+    
+//     text-align: left;
+//     margin-left: 2.5rem;
+
+//   }
+    
+// } 
+
+
+
+   
+html, body{ 
+   display:flex;
+   flex-direction:column;
+   height:100%;
+
+    // height: 100%;
+}
+
+body{
+   background-color:black;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+
+}
+
+header{
+   width: 100%;
+//    margin-top: 10%;
+   height: auto;
+   flex: 1 0 auto;  
+   flex-wrap: wrap;
+   flex-direction: column; 
+   display: flex;
+   align-content: center;
+   align-items: center;
+} 
+
+
+.banner{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+    margin-top: 15%;
+    
+}
+
+
+.logo{
+
+   margin-top:2rem;
+   width: 100%;
+   height: 100%;
+   align-self: center;
+}    
+
+
+.choice{
+   color:white;
+   text-align: center;
+   margin-top: 1.5rem;
+   display:flex;
+   flex-direction: column;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+select{
+   text-align: center;
+   width: 65%;
+
+}  
+
+
+
+.topstories{ 
+  
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+//    margin-top: 40%;
+//    height:70rem;
+   
+} 
+
+p{
+   
+   background:rgba(0,0,0,0.5);
+   height: auto;
+   
+}
+
+.stories{
+
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: flex-start;
+   align-content: stretch;
+   justify-content: flex-start;
+   text-align: end;
+   flex-direction: column;
+   display: flex;
+//    flex-wrap: wrap;
+   width: 100%;
+   margin: 0px;
+} 
+
+.stories a {
+   color: #ffffff;
+   font-size: 1rem;
+   align-self: flex-end;
+   width: 100%;
+
+}  
+/* news style for mobile <600px */
+.newsbackground{
+   
+   width:100%;
+   background-repeat:no-repeat;
+   background-size:cover;
+   background-position:center;
+   height:300px;
+   width: 100%;
+   display: flex;
+   flex-direction: column-reverse;
+
+}  
+
+
+.footer{
+    color:#c2c2c2;
+    text-align: center
+   }
+
+/* Mobile */
+
+
+
+
+
+
+/* Tablet */
+
+
+@media screen and (min-width:600px){
+    header{
+       width: 100%;
+       height: auto;
+       flex-direction: row;
+       display:flex;
+       justify-content: left;
+       margin-top:0px;
+
+   }
+
+   .banner{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin-top: 20%;
+    margin-top: 15%;
+    width: 50rem;
+    flex-wrap: wrap;
+    margin-top: 15%;
+    margin-left: 2rem;
+    justify-content: left;
+
+   }
+
+   .logo{
+    width: 60%;
+    margin-top:0px;
+   }
+
+   select{
+    width: 80%;
+   }
+
+   .choice{
+       display: flex;
+       flex-direction: column ;
+       margin-top: 15rem;
+    //    margin-top:40%;
+   }
+   
+   .topstories{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       flex-flow: row wrap;
+   }
+
+   .stories{
+       flex-wrap: wrap;
+       display: inline-flex;
+       flex-direction: row;
+      
+
+   }
+
+   .stories a{
+       width: 33%;
+   }
+
+   .newsbackground{
+       width: 100%;
+      
+   }
+
+   .footer{
+    color:#c2c2c2;
+    text-align: center
+   }
+
+   .copyright{
+
+    text-align: center;
+    margin-top: 15%;
+    }   
+  
+}   
+
+/* Desktop */
+
+@media screen and (min-width:1000px){
+
+    header{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        display:flex;
+        justify-content: left;
+        margin-top:0px;
+    }
+
+
+   .banner{
+    //    margin-top:10%;
+      height: 100%;
+       flex-direction:row;
+       height: 100%;
+       align-items: center;
+    }
+
+
+   .logo{
+    //    background-position: center left;
+    //    background-size: 20rem;
+       margin-top: 0%;
+  
+    }
+
+
+   
+   .choice{
+    margin-top: 0rem;
+    }
+
+   .topstories{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       flex-flow: row wrap;
+    }
+
+   .stories{
+       flex-wrap: wrap;
+       display: inline-flex;
+       flex-direction: row;
+    }
+
+   .stories a{
+       width: 25%;
+    }
+
+   .newsbackground{
+       width: 100%;
+      
+    }
+
+
+
+
+/* footer for mobile and tablet ( < 1000px) */
+
+footer{
+   
+   color:#c2c2c2;
+   width:100%;    
+   flex-shrink: 0;
+   height: 2rem;
+}  
+
+
+.copyright{
+
+   text-align: center;
+   margin-top: 15%;
+}   
+}
+/* footer Destop  */
+
+ @media screen and (min-width:1000px){
+
+ .copyright{
+   
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+ }
+   
+   
+}    

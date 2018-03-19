@@ -11,9 +11,9 @@ var sass = require("gulp-sass");
 var prettyError = require('gulp-prettyerror');
 
 
-// autoprefixer = require("gulp-autoprefixer"),
-//   cssnano = require("gulp-cssnano"),
-//   rename = require("gulp-rename");
+var autoprefixer = require("gulp-autoprefixer"),
+  cssnano = require("gulp-cssnano"),
+  rename = require("gulp-rename");
 
 // This is a very basic Gulp task,
 // with a name and some code to run
@@ -39,12 +39,12 @@ gulp.task('scripts', ['lint'], function() {
 
 
 gulp.task('watch', function() {
-   gulp.watch(['js/*.js', '*.css', '*.html'] , ['lint', 'scripts', 'reload']);
+   gulp.watch(['js/*.js', 'sass/*.scss', '*.html'] , ['lint', 'scripts', 'reload']);
 });
 
 // browsersync
 
-gulp.task('reload', ['scripts'], function() {
+gulp.task('reload', ['scripts','sass','lint'], function() {
     browserSync.reload();
  });
 
@@ -58,7 +58,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['lint','browser-sync','scripts', 'watch'])
+gulp.task('default', ['sass','lint','browser-sync','scripts', 'watch', ])
 // gulp-eslint
 
 
@@ -76,7 +76,7 @@ gulp.task('default', ['lint','browser-sync','scripts', 'watch'])
 
 gulp.task("sass", function() {
     return gulp
-      .src("./sass/style.scss")
+      .src("sass/style.scss")
       .pipe(prettyError())
       .pipe(sass())
       .pipe(
