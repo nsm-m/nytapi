@@ -2,23 +2,41 @@
   "name": "nytproject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amsan-M/NYTimes-Project.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-prettyerror": "^1.2.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+  "bugs": {
+    "url": "https://github.com/Amsan-M/NYTimes-Project/issues"
   },
+  "homepage": "https://github.com/Amsan-M/NYTimes-Project#readme",
   "dependencies": {
-    "gulp-eslint": "^4.0.2"
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-eslint": "^6.0.0",
+    "gulp-prettyerror": "^2.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "typescript": "^4.6.4"
   }
 }

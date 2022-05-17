@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NYTimes Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYTimes Project</title>
 
 
-    <link rel="stylesheet" href="reset.css">
-    <!-- also the rest should be with sass folder -->
-    <link rel="stylesheet" href="build/css/style.min.css"> 
-    <!-- <link rel="stylesheet" href="sass/style.scss"> -->
-    
-    
+  <link rel="stylesheet" href="reset.css">
+  <!-- also the rest should be with sass folder -->
+  <link rel="stylesheet" href="build/css/style.min.css">
+  <!-- <link rel="stylesheet" href="sass/style.scss"> -->
+
+
 </head>
 
 
 <body>
+<div class="wrapper">
+    <header id="header">
 
- 
-
-    <header>
- 
-      <div class = "banner">
-
-        <div class="logo"> 
-          <img src="images/nyt-logo.svg" alt="New York Time logo" height="100% "width="100%">
-        </div>   
+      <div class="banner" id="banner">
 
 
-        <div class="choice">
-      
-               Choose a section:
-
-  
-            <select>
-              <option value="home">Home</option>
-              <option value="opinion">Opinion</option>
-              <option value="world">World</option>
-              <option value="national">National</option>
-              <option value="politics">Politics</option>
-              <option value="upshot">Upshot</option>
-              <option value="nyregion">NY Region</option>
-              <option value="business">Business</option>
-              <option value="technology">Technology</option>
-              <option value="science">Science</option>
-              <option value="health">health</option>
-              <option value="sports">Sports</option>
-              <option value="arts">Arts</option>
-              <option value="books">Books</option>
-              <option value="movies">Movies</option>
-              <option value="movies">Movies</option>
-              <option value="theater">Theater</option>
-              <option value="sundayreview">Sunday Review</option>
-            </select> 
-    
-         </div>
+        <div class="logo" id="logo">
+          <img class="image" src="images/nyt-logo.svg" alt="New York Time logo" height="100% " width="100%">
         </div>
-      </header>
+
+        <div class="choice" id="choice">
+
+          <h1 id="choose">Choose a section:</h1>
+          <select id="selection">
+            <option value="home">Home</option>
+            <option value="opinion">Opinion</option>
+            <option value="world">World</option>
+            <option value="national">National</option>
+            <option value="politics">Politics</option>
+            <option value="upshot">Upshot</option>
+            <option value="nyregion">NY Region</option>
+            <option value="business">Business</option>
+            <option value="technology">Technology</option>
+            <option value="science">Science</option>
+            <option value="health">health</option>
+            <option value="sports">Sports</option>
+            <option value="arts">Arts</option>
+            <option value="books">Books</option>
+            <option value="movies">Movies</option>
+            <option value="movies">Movies</option>
+            <option value="theater">Theater</option>
+            <option value="sundayreview">Sunday Review</option>
+          </select>
+
+        </div> <!-- choice -->
+
+      </div><!-- banner -->
+
+    </header>
+
+      <!-- </div> -->
+
+
+     <!-- <div class="content-wrapper"> -->
+
+      <section class="topstories" id="topstories">
+<h1 class="category"></h1>
+        <div class="stories"> </div> 
+
+      </section>
+
+    <!-- </div>  -->
  
+  </div>
 
 
+  <footer>
 
-      <div class= "topstories"> 
-           
-         <div class= "stories">  </div>    
-     
-      </div>
+    <div class="copyright"> &copy; copyright 2016 instaNews </div>
 
+  </footer>
 
-    <!-- </div> -->
-
-
-<footer>
-
-  <div class= "copyright"> &copy; Copyright 2016 INSTANEWS  </div>
-   
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="/Users/amsan/Desktop/NYTproject/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
+
 </html>
