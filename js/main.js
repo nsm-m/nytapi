@@ -1,6 +1,6 @@
 
 $('select').on('change', function () {
-
+  var mykey = config.API_KEY;
   //$(document).on("ready", function () {
   $('.stories').empty();
   $('.category').empty();
@@ -8,12 +8,12 @@ $('select').on('change', function () {
 
   var url = 'https://api.nytimes.com/svc/topstories/v2/' + select + '.json';
   url += '?' + $.param({
-    'api-key': 'ux3TjXnpDA7sUjyF08dNK0o0JBHfcbGb'
+    'api-key': mykey
   });
 
 
   $.ajax({
-    url: url,
+   // url: url,
     method: 'GET',
   }).done(function (data) {
 
@@ -107,7 +107,7 @@ $('select').on('change', function () {
 
       let thumbnailArray = article.multimedia;
       let test = Array.isArray(thumbnailArray)
-    //  console.log(test);
+      //  console.log(test);
       if ((isEmpty(article.title) === false) && ((Array.isArray(thumbnailArray) === true) && (thumbnailArray.length !== 0))) {
 
         let thumbnail;
