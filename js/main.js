@@ -1,7 +1,7 @@
 
 $('select').on('change', function () {
   var mykey = config.API_KEY;
-  //$(document).on("ready", function () {
+  
   $('.stories').empty();
   $('.category').empty();
   var select = $('select').val();
@@ -117,22 +117,22 @@ $('select').on('change', function () {
           case 1:
             console.log(thumbnailArray.length);
             thumbnail = thumbnailArray[0].url;
-            // code block
+            
             break;
           case 2:
             thumbnail = thumbnailArray[1].url;
             console.log(thumbnailArray.length);
-            // code block
+            
             break;
           case 3:
-            // code block
+            
             thumbnail = thumbnailArray[2].url;
             console.log(thumbnailArray.length);
             break;
           default:
             thumbnail = thumbnailArray[1].url;
             console.log(thumbnailArray.length);
-            // code block
+            
             return thumbnail
         }
         console.log(thumbnail);
@@ -192,47 +192,7 @@ $('select').on('change', function () {
 });
 
 
-// get the header logo to resize
 
-// 
-
-// $("select").click(function () {
-//   $(".logo").animate({
-
-//     width: '4rem',
-//     marginTop: '-5rem',
-//   });
-// });
-
-// $("select").click(function () {
-//   $(".choice").animate({
-
-//     marginTop: '-5rem',
-
-//   });
-// });
-
-// $("select").click(function () {
-//   $(".header").animate({
-
-//     height: 'auto',
-
-//   });
-// });
-
-
-
-//resizing animation test
-
-
-
-
-
-
-
-
-
-//$(document).on("ready", function () {
 $('#selection').change(function () {
   var selected = $('select').val();
 
