@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,15 +62,27 @@ html {
   height: 100%;
 }
 
+h1,
+h2,
+section h1,
+footer p,
+header,
+.category {
+  color: #F6F6F4;
+}
+
 body {
-  background-color: black;
-  display: block;
+  background-color: #0B0B09;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-wrapper {
@@ -86,18 +98,8 @@ body {
   padding: 3%;
 }
 
-.wrapper {
-  min-height: 100%;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+select {
+  color: #0B0B09;
 }
 
 .wrapper {
@@ -111,11 +113,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.footer {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  min-height: 100%;
 }
 
 header {
@@ -158,7 +156,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60%;
+  min-width: 60%;
   margin: 5%;
   padding: 5%;
   -webkit-box-align: center;
@@ -202,32 +200,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 250px;
+  min-width: 90%;
 }
 .choice h1 {
-  font-family: "Newsreader", serif;
-  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
   margin: 2%;
   padding: 2%;
 }
-
-select {
+.choice select {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
   text-align: center;
   width: 70%;
-  font-size: 1.5em;
   margin: 2%;
   padding: 1%;
 }
 
-@media screen and (min-width: 600px) {
-  .choice {
-    min-width: 50%;
-  }
-
-  .choice h1 {
-    font-size: 1.8em;
-  }
-
+@media screen and (min-width: 680px) {
   .banner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -237,8 +229,36 @@ select {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+
+  .choice {
+    min-width: 50%;
+  }
+  .choice h1 {
+    font-size: 1.2em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+  }
+  .choice select {
+    font-size: 1.2em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+  }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1480px) {
+  .choice {
+    min-width: 45%;
+  }
+  .choice h1 {
+    font-size: 1.5em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+  }
+  .choice select {
+    font-size: 1.5em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+  }
+
   .logo {
     margin: 5%;
     padding: 3%;
@@ -246,19 +266,36 @@ select {
     height: 100%;
   }
 
-  .banner .choice {
-    min-width: 45%;
-  }
-  .banner .choice h1 {
-    font-size: 2em;
+  select {
+    font-size: 1.5em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
   }
 }
 img {
   width: 100%;
 }
 
+.topstories {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
 .category {
-  width: 80%;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,9 +303,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: whitesmoke;
-  font-family: "Newsreader", serif;
-  font-size: 2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -277,86 +311,72 @@ img {
   text-transform: uppercase;
 }
 
-.topstories {
-  display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
 .stories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  display: flex;
-  width: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 0px;
+  text-align: end;
+  width: 80%;
 }
 .stories .newsbackground {
-  width: 40%;
-  max-width: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  margin-bottom: 5%;
+  max-width: 40%;
+  position: relative;
+  width: 40%;
 }
-.stories p {
-  font-family: "Newsreader", serif;
-  font-size: 1rem;
-  color: white;
-  font-family: "Newsreader", serif;
-  line-height: 1.2;
-  padding: 6%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.stories a {
-  position: absolute;
-  height: 30%;
-  color: white;
+
+.test {
   background: rgba(0, 0, 0, 0.6);
+  display: block;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100%;
   text-align: left;
+  position: absolute;
+}
+.test a {
+  color: #F6F6F4;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  display: block;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: auto;
+  text-align: center;
+  padding: 7%;
 }
 
-.newsbackground:hover a {
+.newsbackground:hover .test {
   overflow: hidden;
   -webkit-animation-name: displayTitle;
           animation-name: displayTitle;
@@ -383,18 +403,26 @@ img {
     height: 100%;
   }
 }
-.newsbackground:hover p {
+.newsbackground:hover .newslink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  white-space: pre-line;
   overflow: hidden;
   text-overflow: unset;
+  white-space: pre-line;
 }
 
 @media (min-width: 681px) {
   .category {
-    font-size: 2.5em;
+    font-size: 1.6em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+  }
+
+  .test a {
+    color: #F6F6F4;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4em;
   }
 
   .stories .newsbackground {
@@ -406,59 +434,72 @@ img {
     font-size: 1.8rem;
   }
 }
-@media (min-width: 1240px) {
+@media (min-width: 1480px) {
   .category {
-    font-size: 3em;
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
   }
 
   .stories .newsbackground {
-    width: 22%;
     max-width: 22%;
+    width: 22%;
   }
   .stories .newsbackground p {
-    line-height: 1.2;
     font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .test a {
+    color: #F6F6F4;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8em;
   }
 }
 footer {
-  font-family: "Newsreader", serif;
-  color: #fff;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .copyright {
-  font-size: 1em;
-  color: #c2c2c2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-transform: capitalize;
-  width: 90%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 3%;
   padding: 2%;
+  text-transform: capitalize;
+  width: 90%;
+}
+.copyright p {
+  font-size: 0.8em;
+  font-family: "Newsreader", serif;
 }
 
 @media screen and (min-width: 600px) {
   .copyright {
-    font-size: 1.5em;
-    text-align: center;
     margin: 2%;
     padding: 2%;
   }
+  .copyright p {
+    font-size: 1.2em;
+    font-family: "Newsreader", serif;
+  }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1480px) {
   .copyright {
-    font-size: 2em;
     margin: 1%;
     padding: 1%;
+  }
+  .copyright p {
+    font-size: 1.5em;
+    font-family: "Newsreader", serif;
   }
 }

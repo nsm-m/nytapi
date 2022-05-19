@@ -1,7 +1,7 @@
 
 $('select').on('change', function () {
   var mykey = config.API_KEY;
-  
+
   $('.stories').empty();
   $('.category').empty();
   var select = $('select').val();
@@ -13,11 +13,9 @@ $('select').on('change', function () {
 
 
   $.ajax({
-   // url: url,
+    url: url,
     method: 'GET',
   }).done(function (data) {
-
-    // console.log(data.results);
 
     let articleList = data.results;
 
@@ -102,146 +100,88 @@ $('select').on('change', function () {
     //   "multimedia": "https://picsum.photos/800",
     //   "url": "http://mail.ru/nunc/vestibulum/ante.jpg?lacinia=rhoncus&sapien=dui&quis=vel&libero=sem"
     // }]
-    $(".category").append(select);
+
+
+
+
     articleList.forEach(article => {
 
+      // console.log(article);
       let thumbnailArray = article.multimedia;
-      let test = Array.isArray(thumbnailArray)
-      //  console.log(test);
-      if ((isEmpty(article.title) === false) && ((Array.isArray(thumbnailArray) === true) && (thumbnailArray.length !== 0))) {
+      let ArrayExist = Array.isArray(thumbnailArray)
+
+
+      if ((isEmpty(article.title) === false) && ((ArrayExist === true) && (thumbnailArray.length !== 0))) {
 
         let thumbnail;
 
         switch (thumbnailArray.length) {
 
           case 1:
-            console.log(thumbnailArray.length);
+            // console.log(thumbnailArray.length);
             thumbnail = thumbnailArray[0].url;
-            
+
             break;
           case 2:
             thumbnail = thumbnailArray[1].url;
-            console.log(thumbnailArray.length);
-            
+            //  console.log(thumbnailArray.length);
+
             break;
           case 3:
-            
+
             thumbnail = thumbnailArray[2].url;
-            console.log(thumbnailArray.length);
+            // console.log(thumbnailArray.length);
             break;
           default:
             thumbnail = thumbnailArray[1].url;
-            console.log(thumbnailArray.length);
-            
+
+
             return thumbnail
         }
-        console.log(thumbnail);
-        // if (article.multimedia[2]) {
-        //   $(".stories").append("<a href='" + article.url + "' class='newslink'><div class='newsbackground' style='background-image: url(" + article.multimedia[2].url + ")'> <p class = 'newstitle'>" + article.abstract + "</p></div></a>");
 
-        $('.stories').append('<div class=\'newsbackground\'> <img src=\'' + thumbnail + '\'></img>  <a href=\'' + article.url + '\' class=\'newslink\'> <p class = \'newstitle\'>' + article.title + '</p></a></div>');
+        $('.stories').append('<div class=\'newsbackground\'> <img src=\'' + thumbnail + '\'></img><div class="test">  <a href=\'' + article.url + '\' class=\'newslink\'>' + article.title + '</a></div></div>');
+
       }
-      //test
-      //  $(".stories").append("<div class='newsbackground'> <img src='" + article.multimedia + "'></img>  <a href='" + article.url + "' class='newslink'> <p class = 'newstitle'>" + article.title + "</p></a></div>");
-
-      //  $(".stories").append("<div class='newsbackground' style='background-image: url(" + article.multimedia[2].url + ")'> <a href='" + article.url + "' class='newslink'> <p class = 'newstitle'>" + article.title + "</p></a></div>");
-
-
-      // } else {
-      //   article.splice(i, 1);
-      //   i--;
-      // }
-      // }
-      // $(".stories").append("<a href='" + data.results[i].url + "' class='newslink'><div class='newsbackground' style='background-image: url(" + data.results[i].multimedia[4].url + ")'> <p class = 'newstitle'>" + data.results[i].abstract + "</p></div></a>");
-
-      //
-      //
-      //
-      //
-      //
-      //  if (data.results[i].multimedia[4]) {
-      //     $(".stories").append("<a href='" + data.results[i].url + "' class='newslink'><div class='newsbackground' style='background-image: url(" + data.results[i].multimedia[4].url + ")'> <p class = 'newstitle'>" + data.results[i].abstract + "</p></div></a>");
-
-
-      //   } else {
-      //     data.results.splice(i, 1);
-      //     i--;
-      //   }
-
     });
-
-
-    // for (var i = 0; i < 12; ++i) {
-    //   if (data.results[i].multimedia[4]) {
-    //     $(".stories").append("<a href='" + data.results[i].url + "' class='newslink'><div class='newsbackground' style='background-image: url(" + data.results[i].multimedia[4].url + ")'> <p class = 'newstitle'>" + data.results[i].abstract + "</p></div></a>");
-
-
-    //   } else {
-    //     data.results.splice(i, 1);
-    //     i--;
-    //   }
-    //   console.log(data.results[i].multimedia);
-
-
-    // }
 
   })
 
-
-
 });
-
 
 
 $('#selection').change(function () {
   var selected = $('select').val();
 
-
-  //console.log(selected);
-
   $('.image').animate({
 
     width: '50px',
-    // marginTop: '-5rem',
+
   });
   $('.header').animate({
 
     height: 'auto',
 
   });
-  $('.choice').animate({
+  $('.category').append(selected);
 
-    //  marginTop: '-5rem',
-
-  });
-  //alert();
   document.getElementById('banner').style.flexDirection = 'row';
   document.getElementById('banner').style.margin = '1%';
   document.getElementById('banner').style.flexWrap = 'wrap';
   document.getElementById('banner').style.width = '80%';
   document.getElementById('banner').style.padding = '1%';
   document.getElementById('banner').style.justifyContent = 'center';
-  //  document.getElementById("choose").style.fontSize = "1.8em";
+
   document.getElementById('logo').style.width = 'auto';
   document.getElementById('logo').style.padding = '2%';
   document.getElementById('logo').style.margin = '2%';
+  document.getElementById('logo').style.border = '4px solid #f6f6f4';
 
-  document.getElementById('logo').style.border = '4px solid whitesmoke';
   document.getElementById('selection').style.width = 'auto';
+
   document.getElementById('choice').style.minWidth = '300px';
-  // document.getElementById("header").style.gridColumnStart = "2";
-  // document.getElementById("header").style.gridColumnEnd = "12";
-  // document.getElementById("header").style.gridRowStart = "1";
-  // document.getElementById("header").style.gridRowEnd = "2";
+
   document.getElementById('header').style.justifyContent = 'flex-start';
   document.getElementById('topstories').style.display = 'flex';
-  // document.getElementById("topstories").style. = "";
-  // document.getElementById("topstories").style.= "";
-  // document.getElementById("topstories").style. = "";
-  // document.getElementById("topstories").style. = "";
-
-  //document.getElementById("choice").style.flexGrow = "4";
-  // document.getElementsByClassName("banner").style.flexDirection = "row";
 
 
 });
@@ -253,5 +193,5 @@ function isEmpty(dataString) {
   } else {
     return false
   }
-  //return (!dataString || dataString === 0);
+
 }

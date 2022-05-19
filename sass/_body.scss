@@ -2,12 +2,22 @@ html {
     height: 100%;
 }
 
+h1,
+h2,
+section h1,
+footer p,
+header,
+.category {
+    color: $white;
+}
+
 body {
-    background-color: black;
-    display: block;
+    background-color: $black;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-wrapper {
@@ -18,29 +28,13 @@ body {
     padding: 3%;
 }
 
-.wrapper {
-    min-height: 100%;
-}
-
-// .wrapper {
-//     display: grid;
-//     grid-template-columns: repeat(12, 1fr);
-//     grid-template-rows: repeat(12, 1fr);
-//     height: 100vh;
-//     overflow: hidden;
-// }
-
-body {
-    display: flex;
-    flex-direction: column; 
+select {
+    color: $black;
 }
 
 .wrapper {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-}
-
-.footer {
-    flex-shrink: 0;
+    min-height: 100%;
 }

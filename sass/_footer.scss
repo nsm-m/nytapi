@@ -1,35 +1,33 @@
 footer {
-   font-family: $news;
-
-   color: #fff;
-   text-align: center;
    display: flex;
    justify-content: center;
+   text-align: center;
 }
 
-
 .copyright {
-   font-size: 1em;
-   color: #c2c2c2;
    display: flex;
-   text-transform: capitalize;
-   width: 90%;
    justify-content: center;
    margin: 3%;
    padding: 2%;
+   text-transform: capitalize;
+   width: 90%;
 
+   p {
+      @include main-small;
+   }
 }
 
 // Tablet
 
 @media screen and (min-width:600px) {
 
-
    .copyright {
-      font-size: 1.5em;
-      text-align: center;
       margin: 2%;
       padding: 2%;
+
+      p {
+         @include main-medium;
+      }
    }
 
 }
@@ -37,14 +35,14 @@ footer {
 
 // Desktop
 
-@media screen and (min-width:1000px) {
-
+@media screen and (min-width:1480px) {
 
    .copyright {
-      font-size: 2em;
       margin: 1%;
       padding: 1%;
+
+      p {
+         @include main-large;
+      }
    }
-
-
 }

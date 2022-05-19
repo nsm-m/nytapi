@@ -4,90 +4,79 @@ img {
    width: 100%;
 }
 
+.topstories {
+   align-content: center;
+   display: none;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+}
+
 .category {
-   width: 80%;
+   @include category-small;
    display: flex;
    flex-direction: row;
-   color: whitesmoke;
-   font-family: $news;
-   font-size: 2em;
    justify-content: center;
    margin: 2% 0% 2% 0%;
    padding: 1%;
    text-transform: uppercase;
 }
 
-.topstories {
-   display: none;
-   flex-wrap: wrap;
-   width: 100%;
-   justify-content: center;
-
-   flex-direction: column;
-
-   align-content: center;
-
-}
-
 .stories {
-
-   display: flex;
-   flex-wrap: wrap;
    align-items: flex-start;
    align-content: stretch;
-   justify-content: space-evenly;
-   text-align: end;
-   flex-direction: row;
    display: flex;
-   width: 80%;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
    margin: 0px;
+   text-align: end;
+   width: 80%;
 
    .newsbackground {
-      width: 40%;
-      max-width: 40%;
+      align-items: center;
       display: flex;
-      margin-bottom: 5%;
       flex-direction: column;
-      position: relative;
       justify-content: end;
+      margin-bottom: 5%;
+      max-width: 40%;
+      position: relative;
+      width: 40%;
    }
 
-   p {
-      font-family: $news;
-      font-size: 1rem;
-      color: white;
-      font-family: $news;
-      line-height: 1.2;
-      padding: 6%;
-      flex-wrap: wrap;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-   }
+}
+
+.test {
+
+   background: rgba(0, 0, 0, .6);
+   display: block;
+   align-self: flex-end;
+   width: 100%;
+   text-align: left;
+   position: absolute;
 
    a {
-      position: absolute;
-      height: 30%;
-      color: white;
-      background: rgba(0, 0, 0, 0.6);
-      align-self: flex-end;
-      width: 100%;
-      text-align: left;
+      @include title-small;
+      display: block;
+      width: 80%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: auto;
+      text-align: center;
+      padding: 7%;
 
    }
 
 }
 
-.newsbackground:hover a {
-
+.newsbackground:hover .test {
    overflow: hidden;
    animation-name: displayTitle;
    animation-duration: 3.5s;
    animation-fill-mode: forwards;
-
 }
-
-
 
 @keyframes displayTitle {
    0% {
@@ -99,25 +88,26 @@ img {
    }
 }
 
-
-
-
-.newsbackground:hover p {
+.newsbackground:hover .newslink {
    display: flex;
-   white-space: pre-line;
    overflow: hidden;
    text-overflow: unset;
-
+   white-space: pre-line;
 }
 
 
 
 //  Tablet
-
-
 @media (min-width:681px) {
    .category {
-      font-size: 2.5em;
+      @include category-medium;
+   }
+
+   .test {
+      a {
+         @include title-medium;
+
+      }
    }
 
    .stories {
@@ -135,27 +125,29 @@ img {
    }
 }
 
-//  Destop
-
-
-@media (min-width:1240px) {
+//  Desktop
+@media (min-width:1480px) {
    .category {
-      font-size: 3em;
+      @include category-large;
    }
-
 
    .stories {
       .newsbackground {
-         width: 22%;
          max-width: 22%;
+         width: 22%;
 
          p {
-            line-height: 1.2;
             font-size: 1.9rem;
-
+            line-height: 1.2;
          }
 
       }
 
+   }
+
+   .test {
+      a {
+         @include title-large;
+      }
    }
 }

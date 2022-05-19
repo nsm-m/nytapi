@@ -16,13 +16,12 @@ header {
    flex-direction: column;
    align-content: center;
    justify-content: center;
-   width: 60%;
+   min-width: 60%;
    margin: 5%;
    padding: 5%;
    align-items: center;
    flex-wrap: wrap;
 }
-
 
 .logo {
    margin: 5%;
@@ -31,9 +30,7 @@ header {
    flex-direction: column;
    width: 100%;
    height: 100%;
-
 }
-
 
 .choice {
    color: white;
@@ -46,47 +43,65 @@ header {
    display: flex;
    flex-wrap: wrap;
    align-items: center;
-   min-width: 250px;
+   min-width: 90%;
 
    h1 {
-      font-family: $news;
-      font-size: 1.5em;
+      @include selection-small;
       margin: 2%;
       padding: 2%;
+   }
 
+   select {
+      @include selection-small;
+      text-align: center;
+      width: 70%;
+      margin: 2%;
+      padding: 1%;
    }
 }
-
-select {
-   text-align: center;
-   width: 70%;
-   font-size: 1.5em;
-   margin: 2%;
-   padding: 1%;
-}
-
 
 
 // Media Queries for Tablet 
-@media screen and (min-width:600px) {
-   .choice {
-      min-width: 50%;
-   }
-
-   .choice h1 {
-      font-size: 1.8em;
-   }
+@media screen and (min-width:680px) {
 
    .banner {
       flex-direction: row;
       width: 80%;
       flex-wrap: nowrap;
    }
+
+   .choice {
+      min-width: 50%;
+
+      h1 {
+         @include selection-medium;
+      }
+
+      select {
+         @include selection-medium;
+      }
+
+   }
+
+
 }
 
 
 //  Media Queries for desktop 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1480px) {
+
+   .choice {
+      min-width: 45%;
+
+      h1 {
+         @include selection-large;
+      }
+
+      select {
+         @include selection-large;
+      }
+
+   }
 
    .logo {
       margin: 5%;
@@ -95,16 +110,8 @@ select {
       height: 100%;
    }
 
-   .banner {
-      .choice {
-         min-width: 45%;
-
-         h1 {
-            font-size: 2em;
-         }
-      }
+   select {
+      @include selection-large;
    }
-
-
 
 }

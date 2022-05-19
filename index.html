@@ -6,23 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NYTimes Project</title>
-
-
   <link rel="stylesheet" href="reset.css">
-  <!-- also the rest should be with sass folder -->
   <link rel="stylesheet" href="build/css/style.min.css">
-  <!-- <link rel="stylesheet" href="sass/style.scss"> -->
-
-
 </head>
 
 
 <body>
-<div class="wrapper">
+  <div class="wrapper">
     <header id="header">
-
       <div class="banner" id="banner">
-
 
         <div class="logo" id="logo">
           <img class="image" src="images/nyt-logo.svg" alt="New York Time logo" height="100% " width="100%">
@@ -31,6 +23,7 @@
         <div class="choice" id="choice">
 
           <h1 id="choose">Choose a section:</h1>
+
           <select id="selection">
             <option value="home">Home</option>
             <option value="opinion">Opinion</option>
@@ -55,29 +48,18 @@
         </div> <!-- choice -->
 
       </div><!-- banner -->
-
     </header>
 
-      <!-- </div> -->
+    <section class="topstories" id="topstories">
+      <h1 class="category"></h1>
 
+      <div class="stories"> </div>
+    </section>
 
-     <!-- <div class="content-wrapper"> -->
-
-      <section class="topstories" id="topstories">
-<h1 class="category"></h1>
-        <div class="stories"> </div> 
-
-      </section>
-
-    <!-- </div>  -->
- 
-  </div>
-
+  </div><!-- wrapper -->
 
   <footer>
-
-    <div class="copyright"> &copy; copyright 2016 instaNews </div>
-
+    <div class="copyright"> <p> &copy; copyright 2016 instaNews </p></div>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

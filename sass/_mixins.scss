@@ -1,0 +1,75 @@
+//News titles
+@mixin title-small {
+    color: $white;
+    font-family: $newsTitle;
+    font-size: 1.2em;
+}
+
+@mixin title-medium {
+    color: $white;
+    font-family: $newsTitle;
+    font-size: 1.4em;
+}
+
+@mixin title-large {
+    color: $white;
+    font-family: $newsTitle;
+    font-size: 1.8em;
+
+}
+
+//Main
+@mixin main-small {
+    font-size: 0.8em;
+    font-family: $mainFont;
+}
+
+@mixin main-large {
+    font-size: 1.5em;
+    font-family: $mainFont;
+}
+
+@mixin main-medium {
+    font-size: 1.2em;
+    font-family: $mainFont;
+}
+
+//Selection drop down and title
+@mixin selection-small {
+    font-family: $selection;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+@mixin selection-medium {
+    font-size: 1.2em;
+    font-family: $selection;
+    font-weight: 300;
+
+}
+
+@mixin selection-large {
+    font-size: 1.5em;
+    font-family: $selection;
+    font-weight: 300;
+}
+
+//category
+@mixin category-small {
+    font-family: $selection;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+@mixin category-medium {
+    font-size: 1.6em;
+    font-family: $selection;
+    font-weight: 700;
+
+}
+
+@mixin category-large {
+    font-size: 2em;
+    font-family: $selection;
+    font-weight: 700;
+}
