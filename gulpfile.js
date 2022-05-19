@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 const { src, dest, parallel, series, watch } = require('gulp');
+
 // var gulp = require('gulp');
 var uglify = require('gulp-uglify'),
   rename = require('gulp-rename');
@@ -14,23 +16,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 
 
-// This is a very basic Gulp task,
-// with a name and some code to run
-// when this task is called:
-// gulp.task("default", function() {
-//   console.log("Hello world");
-// });
-
-
-
-
-//v4 scripts uglify
+//v4 scripts uglify 
 function jsuglify() {
   return src('./js/*.js') // What files do we want gulp to consume?
     .pipe(uglify()) // Call the uglify function on these files
     .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
     .pipe(dest('./build/js'), { sourcemaps: '.' }); // Where do we put the result?
-};
+}
 
 
 
@@ -71,8 +63,7 @@ function linting() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-};
-
+}
 
 
 //gulpv4 sass task
@@ -82,14 +73,14 @@ function styleSass() {
     .pipe(sass())
     .pipe(
       autoprefixer({
-
+ 
       })
     )
     .pipe(dest('./build/css'), { sourcemaps: '.' })
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
     .pipe(dest('./build/css'), { sourcemaps: '.' });
-};
+}
 
 function watchFiles(cb) {
   // Watch SCSS changes    
