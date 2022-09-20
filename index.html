@@ -67,7 +67,9 @@
   <script src="/js/main.js"></script>
   <script type='text/javascript' src='./config.js'></script>
    <script>
-  </script>
+   fetch('/.netlify/functions/get-news')
+     .then(res =>{console.log(response.json())} ) 
+    </script>
 </body>
 
 </html>
