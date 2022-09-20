@@ -99,7 +99,7 @@ body {
 }
 
 select {
-  color: #0B0B09;
+  background-color: red;
 }
 
 .wrapper {
