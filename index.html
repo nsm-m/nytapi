@@ -48,6 +48,18 @@
         </div> <!-- choice -->
 
       </div><!-- banner -->
+
+      <div class="weather">
+
+        <img src="" id="icon" width="60" height="60">
+        
+        <div class="temperature"></div>
+        
+        <div class="city"></div>
+
+        <div class="country"> </div>
+
+      </div>
     </header>
 
     <section class="topstories" id="topstories">
@@ -59,17 +71,41 @@
   </div><!-- wrapper -->
 
   <footer>
-    <div class="copyright"> <p> &copy; copyright 2016 instaNews </p></div>
+    <div class="copyright">
+      <p> &copy; copyright 2016 instaNews </p>
+    </div>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="/js/main.js"></script>
+    <script src="/js/weather.js"></script>
   <script type='text/javascript' src='./config.js'></script>
-   <script>
-   fetch('/.netlify/functions/get-news')
-     .then(res =>{console.log(response.json())} ) 
-    </script>
+  <script>
+    // function getWeather() {
+
+    //   if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(showPosition);
+    //   } else {
+    //     console.log("Geolocation is not supported by this browser.");
+    //   }
+    // }
+
+
+    // function showPosition(position) {
+    //   const geoloc = position;
+
+    //   const lat = geoloc.coords.latitude;
+    //   const long = geoloc.coords.longitude;
+    //   console.log("lat" + lat);
+    //   console.log("long" + long);
+
+    //   fetch(`/.netlify/functions/fetch-news?lat=${lat}&long=${long}`)
+    //     .then(res => res.json())
+    //     .then(data => console.log(data.current))
+    // }
+    // getWeather();
+  </script>
 </body>
 
 </html>
