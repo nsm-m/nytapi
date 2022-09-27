@@ -1,70 +1,56 @@
+$(document).ready(function () {
 
 
-function getWeather() {
+    function getWeather() {
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        console.log("Geolocation is not supported by this browser.");
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            document.getElementById('weather').style.display = 'flex';
+        } else {
+            console.log("Geolocation must be authorized");
+            //document.getElementById('topstories').style.display = 'flex';
+
+        }
     }
-}
 
 
-function showPosition(position) {
-    const geoloc = position;
+    function showPosition(position) {
+        const geoloc = position;
 
-    const lat = geoloc.coords.latitude;
-    const long = geoloc.coords.longitude;
-    // console.log("lat" + lat);
-    // console.log("long" + long);
+        const lat = geoloc.coords.latitude;
+        const long = geoloc.coords.longitude;
 
+        fetch(`/.netlify/functions/fetch-weather?lat=${lat}&long=${long}`)
+            .then(res => res.json()
 
-    fetch(`/.netlify/functions/fetch-weather?lat=${lat}&long=${long}`)
-        .then(res => res.json())
-        .then(data =>
+            )
+            .then(data =>
 
-            showWeather(data.current, data.location),
+                showWeather(data.weather, data.main, data.sys, data.name),
 
-        );
+            );
 
-}
+    }
 
-getWeather();
-
-
-
-function showWeather(val, loc) {
-    //
-    let stringifiedWeather = JSON.stringify(val);
-    let weatherData = JSON.parse(stringifiedWeather);
-    let temperature = weatherData.temperature;
-    let icon = weatherData.weather_icons;
-    let description = weatherData.weather_descriptions;
-
-    // console.log("temperature" + temperature);
-    // console.log("icon" + icon);
-    // console.log("description" + description);
-
-
-    let stringifiedLocation = JSON.stringify(loc);
-    let locationData = JSON.parse(stringifiedLocation)
-    let city = locationData.name;
-    let region = locationData.region;
-    let country = locationData.country;
-
-
-    // console.log("city" + city);
-    // console.log("region" + region);
-    // console.log("country" + country);
-
-    $("#icon").attr("src", ` ${icon}`);
-    $(".temperature").html(`<p>${temperature}</p>`);
-    $(".city").html(`<p>${city},${region} </p>`);
-    $(".country").html(`<p>${country}</p>`);
+    getWeather();
 
 
 
-}
+    function showWeather(weather, main, locationData, city) {
+
+        let weatherMain = weather[0];
+        let weatherInfo = weatherMain.main;
+        let description = weatherMain.description;
+        let icon = weatherMain.icon;
+        let temperature = Math.trunc(main.temp);
+        let country = locationData.country;
+        let locationName = city;
+        console.log(weather);
+        $(".icon").html(`<img src=http://openweathermap.org/img/wn/${icon}@2x.png>`);
+        $(".temperature").html(`<p>${temperature} &#8451</p>`);
+        //   $(".weather-info").html(`<p>${weatherInfo}</p>`);
+        $(".location").html(`<p>${locationName}, ${country} </p>`);
+    }
 
 
-
+});

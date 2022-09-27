@@ -7,7 +7,7 @@ const handler = async (event) => {
   const { long, lat } = event.queryStringParameters;
   // const API_SECRET_KEY = "2c51795136d10122a112f2e5f6ff39ce";
   const API_SECRET_KEY = "8bf1e6357a7a55a3d9796e4e906bc623";
-  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&appid=${API_SECRET_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_SECRET_KEY}&units=metric`;
   // const url = `http://api.weatherstack.com/current?access_key=${API_SECRET_KEY}&query=${lat},${long}`;
 
 

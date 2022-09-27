@@ -172,24 +172,35 @@ $('#selection').change(function () {
   });
   $('.category').append(selected);
 
-  document.getElementById('banner').style.flexDirection = 'row';
-  document.getElementById('banner').style.margin = '1%';
-  document.getElementById('banner').style.flexWrap = 'wrap';
-  document.getElementById('banner').style.width = '80%';
-  document.getElementById('banner').style.padding = '1%';
-  document.getElementById('banner').style.justifyContent = 'center';
+  document.getElementById('banner').style.height='auto';
 
-  document.getElementById('logo').style.width = 'auto';
-  document.getElementById('logo').style.padding = '2%';
-  document.getElementById('logo').style.margin = '2%';
-  document.getElementById('logo').style.border = '4px solid #f6f6f4';
+   document.getElementById('banner').style.flexDirection = 'row';
+  document.getElementById('banner').style.display = 'flex';
+  document.getElementById('banner').style.margin = 'auto';
 
-  document.getElementById('selection').style.width = 'auto';
+  document.getElementById('header').style.flexDirection = 'row-reverse';
+  document.getElementById('choice').style.justifyContent='start';
+  document.getElementById('header').style.height= '15vh';
+  // document.getElementById('banner').style.margin = '1%';
+  // document.getElementById('banner').style.flexWrap = 'wrap';
+   document.getElementById('banner').style.width = '40%';
 
-  document.getElementById('choice').style.minWidth = '300px';
+ // document.getElementById('weather').style.display = 'none';
+  // document.getElementById('banner').style.padding = '1%';
+  // document.getElementById('banner').style.justifyContent = 'center';
 
-  document.getElementById('header').style.justifyContent = 'flex-start';
-  document.getElementById('topstories').style.display = 'flex';
+  // document.getElementById('logo').style.width = 'auto';
+  // document.getElementById('logo').style.padding = '2%';
+   document.getElementById('weather').style.margin = '0 5%';
+  document.getElementById('weather').style.alignSelf='center' ;
+  // document.getElementById('logo').style.border = '4px solid #f6f6f4';
+
+  // document.getElementById('selection').style.width = 'auto';
+
+  // document.getElementById('choice').style.minWidth = '300px';
+
+  // document.getElementById('header').style.justifyContent = 'flex-start';
+   document.getElementById('topstories').style.display = 'flex';
 
 
 });

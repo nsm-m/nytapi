@@ -98,10 +98,6 @@ body {
   padding: 3%;
 }
 
-select {
-  background-color: red;
-}
-
 .wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -114,60 +110,79 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100%;
+  width: 100%;
 }
 
 header {
-  width: 100%;
-  height: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.weather {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+}
+
+.icon-temp-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.location {
+  display: none;
 }
 
 .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-width: 60%;
-  margin: 5%;
-  padding: 5%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  flex-wrap: wrap;
+  height: 80%;
+  margin: auto;
+  width: 90%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
+.choice,
 .logo {
-  margin: 5%;
-  padding: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,8 +190,16 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 100%;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .choice {
@@ -229,7 +252,6 @@ header {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-
   .choice {
     min-width: 50%;
   }
@@ -258,14 +280,12 @@ header {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
   }
-
   .logo {
     margin: 5%;
     padding: 3%;
     max-width: 40%;
     height: 100%;
   }
-
   select {
     font-size: 1.5em;
     font-family: "Oswald", sans-serif;
@@ -418,13 +438,11 @@ img {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
   }
-
   .test a {
     color: #F6F6F4;
     font-family: "Roboto", sans-serif;
     font-size: 1.4em;
   }
-
   .stories .newsbackground {
     width: 30%;
     max-width: 30%;
@@ -440,7 +458,6 @@ img {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
   }
-
   .stories .newsbackground {
     max-width: 22%;
     width: 22%;
@@ -449,7 +466,6 @@ img {
     font-size: 1.9rem;
     line-height: 1.2;
   }
-
   .test a {
     color: #F6F6F4;
     font-family: "Roboto", sans-serif;

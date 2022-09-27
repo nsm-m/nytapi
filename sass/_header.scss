@@ -1,35 +1,85 @@
 header {
-   width: 100%;
-   height: auto;
-   flex: 1 0 auto;
-   flex-wrap: wrap;
-   flex-direction: column;
    display: flex;
-   align-content: center;
+   flex-direction: column;
+   width: 100%;
+   height: 100vh;
+   justify-content: space-between;
+   // height: auto;
+   // flex: 1 0 auto;
+   // flex-wrap: wrap;
+   // flex-direction: column;
+   // display: flex;
+   // align-content: center;
+   // align-items: center;
+   // justify-content: center;
+}
+
+.weather {
+   display: none; // flex or none
+   flex-direction: column;
+
+   width: 30%;
+   align-self: flex-end; //width: 25%;
+   //  align-items: center;
+}
+
+
+.icon {
+
+   display: flex;
+
+
+
+}
+
+.icon-temp-wrapper {
+   display: flex;
+   width: 100%;
+}
+
+.temperature {
+   display: flex;
    align-items: center;
-   justify-content: center;
+}
+
+.location{
+   display:none;
 }
 
 .banner {
+   // display: flex;
+   // flex-wrap: wrap;
+   // flex-direction: column;
+   // align-content: center;
+   // justify-content: center;
+   // width: 90%;
+   // margin: 5%;
+   // padding: 5%;
+   // align-items: center;
+   // flex-wrap: wrap;
+
    display: flex;
-   flex-wrap: wrap;
    flex-direction: column;
-   align-content: center;
-   justify-content: center;
-   min-width: 60%;
-   margin: 5%;
-   padding: 5%;
-   align-items: center;
-   flex-wrap: wrap;
+   height: 80%;
+   margin:auto;
+   width: 90%;
+   justify-content: space-evenly;
 }
 
+.choice,
 .logo {
-   margin: 5%;
-   padding: 3%;
    display: flex;
    flex-direction: column;
-   width: 100%;
-   height: 100%;
+}
+
+
+.logo {
+   // margin: 5%;
+   // padding: 3%;
+   display: flex;
+   flex-direction: column;
+   // width: 100%;
+   // height: 100%;
 }
 
 .choice {
