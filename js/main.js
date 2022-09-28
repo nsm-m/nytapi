@@ -1,3 +1,6 @@
+
+
+
 let response;
 fetch('/.netlify/functions/get-news')
   .then(res => {

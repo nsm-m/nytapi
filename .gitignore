@@ -3,3 +3,6 @@ config.js
 # Local Netlify folder
 .netlify
 node_modules
+.env
+.vscode
+
