@@ -4,6 +4,8 @@ const axios = require('axios');
 const handler = async (event) => {
   const { long, lat } = event.queryStringParameters;
   const weatherKey = process.env.WEATHER_SECRET;
+
+
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${weatherKey}&units=metric`;
 
 
