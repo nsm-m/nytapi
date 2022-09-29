@@ -1,13 +1,12 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
 const axios = require('axios')
 
-// Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const handler = async (event) => {
 
 
-    const API_SECRET_KEY = 'ux3TjXnpDA7sUjyF08dNK0o0JBHfcbGb';
+    const newsKey = process.env.NEWS_SECRET;
     var { select } = event.queryStringParameters;
-    const url = `https://api.nytimes.com/svc/topstories/v2/${select}.json?api-key=${API_SECRET_KEY}`
+    const url = `https://api.nytimes.com/svc/topstories/v2/${select}.json?api-key=${newsKey}`
 
 
     try {
